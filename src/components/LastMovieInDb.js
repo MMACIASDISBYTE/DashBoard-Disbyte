@@ -21,7 +21,7 @@ function LastMovieInDb() {
                         y Recursos Humanos con una plantilla de 35 empleados calificados
                         , con amplia experiencia y trayectoria en comercio tanto con 
                         instalaciones privadas como públicas lo que nos permite ser muy eficientes en las operaciones diarias.</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="https://www.disbyte.com/">Disbyte WebSide</a>
+                        <a className="btn btn-danger" target="_blank" rel="noopener noreferrer" href="https://www.disbyte.com/">Disbyte WebSide</a>
                 </div>
             </div>
         </div>
