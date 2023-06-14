@@ -22,22 +22,6 @@ let tableRowsData = [
 
 function Chart (){
 
-    const [data, setData] = useState(null);
-    useEffect(() => {
-        fetchData();
-        
-    }, []);
-
-    const fetchData = async () =>{
-        try{
-            const response = await fetch('http://localhost:5056/banco')
-            const jsonData = await response.json();
-            setData(jsonData);
-        }catch(error){
-            console.error('Error', error);
-        }
-    };
-    console.log({data});
 
     return (
         /* <!-- DataTales Example --> */

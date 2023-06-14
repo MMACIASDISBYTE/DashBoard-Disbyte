@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from 'react';
+// helper para hacer consulta a la api
+import { BancoApi } from '../../helpers/BancoHelper.js';
+
 
 export const Banco = () => {
 
     const [data, setData] = useState(null);
+
+    // EN el useEffect utilizo el helper para consultar la apiBanco
     useEffect(() => {
-        fetchData();
+        const getData = async () => {
+            const jsonData = await BancoApi();
+            setData(jsonData);
+        };
+        getData()
 
     }, []);
-
-    const fetchData = async () => {
-        try {
-            const response = await fetch('http://localhost:5056/banco')
-            const jsonData = await response.json();
-            setData(jsonData);
-        } catch (error) {
-            console.error('Error', error);
-        }
-    };
-    console.log({ data });
+    // console.log(data)
 
     return (
         <>

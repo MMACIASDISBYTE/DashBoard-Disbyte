@@ -12,6 +12,7 @@ import { Profile } from './Profile';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Banco } from './tablas/Banco';
 import { Proveedores } from './tablas/Proveedores';
+import { EstimateHeader } from './tablas/EstimateHeader';
 
 function SideBar() {
 
@@ -67,6 +68,12 @@ function SideBar() {
                                     <span>Proveedores</span>
                                 </Link>
                             </li>
+                            <li className="nav-item nav-link">
+                                <Link className="nav-link" to="/EstimateHeader">
+                                    <i className="fas fa-folder"></i>
+                                    <span>Estimate Header</span>
+                                </Link>
+                            </li>
                         </>
                         :
                         ''
@@ -113,6 +120,7 @@ function SideBar() {
                 <Route path="/SearchMovies" element={<SearchMovies />}> </Route>
                 <Route path="/Profile" element={<Profile />}> </Route>
                 <Route path="/Proveedor" element={<Proveedores />}> </Route>
+                <Route path="/EstimateHeader" element={<EstimateHeader />}> </Route>
 
                 <Route path="/Banco" element={<Banco />}> </Route>
 

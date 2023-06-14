@@ -5,6 +5,9 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
+<Card style={{ width: '18rem' }} className="border border-info">
+  {/* Contenido de la tarjeta */}
+</Card>
 
 export const CardProfile = () => {
     const { user } = useAuth0();
@@ -16,8 +19,8 @@ export const CardProfile = () => {
     
     return (
         <>
-        <div className='d-flex justify-content-center mt-5'>
-            <Card style={{ width: '18rem' }}>
+        <div className='d-flex justify-content-center text-center mt-5 ml-5'>
+            <Card style={{ width: '18rem'} }>
                 <Card.Img variant="top" src={user.picture} />
                 <Card.Body>
                     <Card.Title>{user.name}</Card.Title>
