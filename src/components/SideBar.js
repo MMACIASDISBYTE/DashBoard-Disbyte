@@ -11,6 +11,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { Profile } from './Profile';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Banco } from './tablas/Banco';
+import { Proveedores } from './tablas/Proveedores';
 
 function SideBar() {
 
@@ -60,6 +61,12 @@ function SideBar() {
                                     <span>Banco</span>
                                 </Link>
                             </li>
+                            <li className="nav-item nav-link">
+                                <Link className="nav-link" to="/Proveedor">
+                                    <i className="fas fa-folder"></i>
+                                    <span>Proveedores</span>
+                                </Link>
+                            </li>
                         </>
                         :
                         ''
@@ -105,6 +112,8 @@ function SideBar() {
                 <Route path="/ContentRowMovies" element={<ContentRowMovies />}> </Route>
                 <Route path="/SearchMovies" element={<SearchMovies />}> </Route>
                 <Route path="/Profile" element={<Profile />}> </Route>
+                <Route path="/Proveedor" element={<Proveedores />}> </Route>
+
                 <Route path="/Banco" element={<Banco />}> </Route>
 
                 <Route component={NotFound} />

@@ -74,12 +74,6 @@ function Chart (){
                     </table>
                 </div>
                 <div>
-                    {
-                        data &&
-                        data.map((row, i) => (
-                            <p key={i}>{row.description}</p>
-                        ))
-                    }
                 </div>
             </div>
         </div>
