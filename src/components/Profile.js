@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import SmallCard from './SmallCard';
 import { useAuth0 } from '@auth0/auth0-react';
 import { CardProfile } from './CardProfile';
 
@@ -23,13 +22,3 @@ useEffect( () =>{
     </>
   )
 }
-
-
-/* DEFINICIÓN DE PROPIEDADES POR DEFAULT */
-
-// SmallCard.defaultProps = {
-//     title: 'No Title',
-//     color: 'success',
-//     cuantity: 'No cuatity',
-//     icon: 'fa-clipboard-list'
-// }
