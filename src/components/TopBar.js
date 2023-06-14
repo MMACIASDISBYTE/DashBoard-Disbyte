@@ -1,12 +1,20 @@
 import React from 'react';
 import foto from '../assets/images/LoginLogoDisbyte.png';
 import { useAuth0 } from '@auth0/auth0-react';
-
+// import { Profile } from './Profile';
+// import { useNavigate } from 'react-router-dom';
 
 function TopBar() {
 
 	const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
+	// const ClickLogin = () => {
+	// 	loginWithRedirect({
+	// 		redirectUri: `${window.location.origin}/Profile`,
+	// 	})
+	// };
+
+	// console.log(usuario, 'este es el usuario')
 	return (
 		<React.Fragment>
 			{/*<!-- Topbar -->*/}
@@ -46,14 +54,15 @@ function TopBar() {
 
 						{/*<!-- Nav Item - User Information -->*/}
 						<li className="nav-item dropdown no-arrow">
-							<a className="nav-link dropdown-toggle" href="/" id="userDropdown">
+							<a className="nav-link dropdown-toggle" href="/Profile" id="userDropdown">
 								<span className="mr-2 d-none d-lg-inline text-gray-600 small">{user.name}</span>
 								<img className="img-profile rounded-circle" src={user.picture} alt={user.nickname} width="60" />
 							</a>
 						</li>
 
 					</ul>
-					<button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>LogOut:</button>
+					<button className="btn btn-secondary" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>LogOut</button>
+					{/* <Profile user={user}/> */}
 				</>)
 
 				// SI NO ESTA AUTENTICADO MUESTRA
@@ -67,7 +76,7 @@ function TopBar() {
 							<a className="nav-link dropdown-toggle" href="/" id="alertsDropdown">
 								<i className="fas fa-bell fa-fw"></i>
 								{/*<!-- Counter - Alerts -->*/}
-								<span className="badge badge-danger badge-counter">3+</span>
+								<span className="badge badge-danger badge-counter"></span>
 							</a>
 						</li>
 
@@ -76,7 +85,7 @@ function TopBar() {
 							<a className="nav-link dropdown-toggle" href="/" id="messagesDropdown">
 								<i className="fas fa-envelope fa-fw"></i>
 								{/*<!-- Counter - Messages -->*/}
-								<span className="badge badge-danger badge-counter">7</span>
+								<span className="badge badge-danger badge-counter"></span>
 							</a>
 						</li>
 
@@ -91,7 +100,7 @@ function TopBar() {
 						</li>
 
 					</ul>
-					<button onClick={() => loginWithRedirect()}>Login:</button>
+					<button className="btn btn-secondary" onClick={() => loginWithRedirect()}>Login</button>
 				</>)
 			}
 			</nav>
@@ -99,4 +108,5 @@ function TopBar() {
 		</React.Fragment>
 	)
 }
+
 export default TopBar;

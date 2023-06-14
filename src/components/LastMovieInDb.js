@@ -1,5 +1,5 @@
 import React from 'react';
-import imagenFondo from '../assets/images/Logo Disbyte.png';
+import imagenFondo from '../assets/images/LogoDisbyte.png';
 
 function LastMovieInDb() {
     return (

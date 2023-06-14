@@ -17,14 +17,14 @@ root.render(
 
   <Auth0Provider
   /* DEBEMOS ENCERRAR LA APP EN EL AuthPrivider0 para poder manejar la sesion en toda la APP */
-  domain={domain}
+      domain={domain}
       clientId={clientId}
       redirectUri={window.location.origin}
-      useRefreshTokens={true}
-      useRefreshTokensFallback={false}
-      authorizationParams={{
-      redirect_uri:"http://localhost:3000//dev-7qwkde4r318nfwz7.us.auth0.com/capacitor/http://localhost:3000/callback"
-    }}
+    //   useRefreshTokens={true}
+    //   useRefreshTokensFallback={false}
+    //   authorizationParams={{
+    //   redirect_uri:"http://localhost:3000//dev-7qwkde4r318nfwz7.us.auth0.com/capacitor/http://localhost:3000/callback"
+    // }}
   >
     <BrowserRouter>
       <App />
