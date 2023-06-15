@@ -13,6 +13,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Banco } from './tablas/Banco';
 import { Proveedores } from './tablas/Proveedores';
 import { EstimateHeader } from './tablas/EstimateHeader';
+import { VentanaModal } from './VentanaModal';
 
 function SideBar() {
 
@@ -121,6 +122,8 @@ function SideBar() {
                 <Route path="/Profile" element={<Profile />}> </Route>
                 <Route path="/Proveedor" element={<Proveedores />}> </Route>
                 <Route path="/EstimateHeader" element={<EstimateHeader />}> </Route>
+                <Route path="/VentanaModal" element={<VentanaModal />}> </Route>
+
 
                 <Route path="/Banco" element={<Banco />}> </Route>
 

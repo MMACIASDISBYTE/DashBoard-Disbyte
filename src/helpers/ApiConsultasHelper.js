@@ -17,7 +17,7 @@ export const ApiHelper = {
     // Crear un registro en la tabla "banco"
     createBancoData: async (newData) => {
         try {
-            const response = await fetch(`${ApiHelper.baseUrl}/banco`, {
+            const response = await fetch(`${ApiHelper.baseUrl}/Banco`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -25,6 +25,7 @@ export const ApiHelper = {
                 body: JSON.stringify(newData),
             });
             const jsonData = await response.json();
+            console.log('Helper', newData)
             return jsonData;
         } catch (error) {
             console.error('Error', error);
