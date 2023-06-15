@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { EstimateHeaderApi } from '../../helpers/EstimateHeaderHelper';
+import { ApiHelper } from '../../helpers/ApiConsultasHelper';
 
 export const EstimateHeader = () => {
 
@@ -7,7 +7,7 @@ export const EstimateHeader = () => {
 
     useEffect(() => {
         const getData = async () => {
-            const jsonData = await EstimateHeaderApi();
+            const jsonData = await ApiHelper.fetchEstimateHeader();
             setData(jsonData);
         }
         getData();

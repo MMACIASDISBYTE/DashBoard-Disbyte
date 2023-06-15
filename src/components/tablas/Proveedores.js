@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // helper para hacer consulta a la api
-import { ProveedorApi } from '../../helpers/ProveedorHelper.js';
+import { ApiHelper } from '../../helpers/ApiConsultasHelper.js';
 
 
 export const Proveedores = () => {
@@ -10,24 +10,12 @@ export const Proveedores = () => {
   // EN el useEffect utilizo el helper para consultar la apiBanco
   useEffect(() => {
     const getData = async () => {
-      const jsonData = await ProveedorApi();
+      const jsonData = await ApiHelper.fetchProveedoresData();
       setData(jsonData);
     }
-    getData()
-    // fetchData();
+    getData();
 
   }, []);
-
-  // const fetchData = async () => {
-  //     try {
-  //         const response = await fetch('http://localhost:5056/proveedor')
-  //         const jsonData = await response.json();
-  //         setData(jsonData);
-  //     } catch (error) {
-  //         console.error('Error', error);
-  //     }
-  // };
-  // console.log({ data });
 
   return (
     <>
