@@ -24,6 +24,7 @@ export const EstimateHeader = () => {
                             <thead>
                                 <tr>
                                     <th>id</th>
+                                    <th>Descripcion</th>
                                     <th>Flia. Art.</th>
                                     <th>Cant. Cont.</th>
                                     <th>freightFwd</th>
@@ -37,6 +38,7 @@ export const EstimateHeader = () => {
                             <tfoot>
                                 <tr>
                                     <th>id</th>
+                                    <th>Descripcion</th>
                                     <th>Flia. Art.</th>
                                     <th>Cant. Cont.</th>
                                     <th>freightFwd</th>
@@ -52,6 +54,7 @@ export const EstimateHeader = () => {
                                     data.map((row, i) => (
                                         <tr key={i}>
                                             <td>{row.id}</td>
+                                            <td>{row.description}</td>
                                             <td>{row.articleFamily}</td>
                                             <td>{row.cantidadContenedores}</td>
                                             <td>{row.articleFamily}</td>
@@ -62,8 +65,8 @@ export const EstimateHeader = () => {
                                                 <td>No</td>
                                             }
                                             <td>{row.own}</td>
-                                            <td>{row.p_gloc_banco}</td>
-                                            <td>{row.p_gloc_despa}</td>
+                                            <td>{row.p_gloc_banco ? row.p_gloc_banco : 'No hay datos'}</td>
+                                            <td>{row.p_gloc_despa ? row.p_gloc_despa : 'No hay datos'}</td>
                                         </tr>
                                     ))}
 
